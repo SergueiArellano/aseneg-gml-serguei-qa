@@ -47,4 +47,8 @@ public class DefinitionStepsMyscouter {
         restAssuredThat(response -> response.body("error", notNullValue()));
         Logger.getLogger("Fin prueba ***********************");
     }
+
+    @Dado("que el usuario indica la provincia <provincia> y el municipio <municipio>")
+    public void queElUsuarioIndicaLaProvinciaProvinciaYElMunicipioMunicipio() {
+    }
 }
