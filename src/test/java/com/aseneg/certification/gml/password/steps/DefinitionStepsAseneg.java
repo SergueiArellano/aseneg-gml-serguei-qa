@@ -6,14 +6,7 @@ import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import net.thucydides.core.annotations.Steps;
-
-import java.util.logging.Logger;
-
-import static com.aseneg.certification.gml.password.helpers.Constant.*;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DefinitionStepsAseneg {
     private DTOAseneg aseneg = new DTOAseneg();

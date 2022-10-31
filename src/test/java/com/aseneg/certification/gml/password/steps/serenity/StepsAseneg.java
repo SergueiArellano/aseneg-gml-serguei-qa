@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import net.thucydides.core.annotations.Step;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 
