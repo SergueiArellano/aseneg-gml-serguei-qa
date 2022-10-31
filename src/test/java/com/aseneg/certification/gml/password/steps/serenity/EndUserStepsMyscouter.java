@@ -1,7 +1,7 @@
-package com.whiz.certification.myscouter.password.steps.serenity;
+package com.aseneg.certification.gml.password.steps.serenity;
 
-import com.whiz.certification.myscouter.password.dto.DtoMyscouter;
-import com.whiz.certification.myscouter.password.helpers.Constant;
+import com.aseneg.certification.gml.password.dto.DtoMyscouter;
+import com.aseneg.certification.gml.password.helpers.Constant;
 import io.restassured.http.ContentType;
 import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Step;

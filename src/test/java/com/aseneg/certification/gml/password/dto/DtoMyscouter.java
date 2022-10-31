@@ -1,4 +1,4 @@
-package com.whiz.certification.myscouter.password.dto;
+package com.aseneg.certification.gml.password.dto;
 
 public class DtoMyscouter {
     private String email;

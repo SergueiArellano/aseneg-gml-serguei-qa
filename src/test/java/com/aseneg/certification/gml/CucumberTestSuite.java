@@ -1,4 +1,4 @@
-package com.whiz.certification.myscouter;
+package com.aseneg.certification.gml;
 
 
 import io.cucumber.junit.CucumberOptions;

@@ -1,12 +1,12 @@
-package com.whiz.certification.myscouter.password.steps;
+package com.aseneg.certification.gml.password.steps;
 
-import com.whiz.certification.myscouter.password.dto.DtoMyscouter;
-import com.whiz.certification.myscouter.password.helpers.Constant;
+import com.aseneg.certification.gml.password.dto.DtoMyscouter;
+import com.aseneg.certification.gml.password.helpers.Constant;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
-import com.whiz.certification.myscouter.password.steps.serenity.EndUserStepsMyscouter;
+import com.aseneg.certification.gml.password.steps.serenity.EndUserStepsMyscouter;
 import org.apache.http.HttpStatus;
 
 import java.util.logging.Logger;

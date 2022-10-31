@@ -1,4 +1,4 @@
-package com.whiz.certification.myscouter.password.helpers;
+package com.aseneg.certification.gml.password.helpers;
 
 public class Constant {
     public static final String ENDPOINT_RECOVERY_PASSWORD = "https://myscouter-api.whiz.pe/api/commons/recovery-password";
