@@ -5,31 +5,39 @@ import com.aseneg.certification.gml.password.steps.serenity.StepsAseneg;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
+import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import net.thucydides.core.annotations.Steps;
 
 import java.util.logging.Logger;
 
+import static com.aseneg.certification.gml.password.helpers.Constant.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class DefinitionStepsAseneg {
     private DTOAseneg aseneg = new DTOAseneg();
+    private Actor serguei;
 
     @Steps
     private StepsAseneg asenegSteps;
 
-    @Dado("que el usuario indica la provincia y el municipio")
-    public void queElUsuarioIndicaLaProvinciaProvinciaYElMunicipioMunicipio() {
-        Logger.getLogger("Inicio prueba ***********************");
-        aseneg.setProvincia("PONTEVEDRA");
-        aseneg.setMunicipio("VIGO");
+    @Dado("que {} indica la provincia {} y el municipio {}")
+    public void queElUsuarioIndicaLaProvinciaProvinciaYElMunicipioMunicipio(String actor, String provincia, String municipio) {
+        aseneg.setProvincia(provincia);
+        aseneg.setMunicipio(municipio);
+        serguei = Actor.named(actor);
+        asenegSteps.otorgarHabilidadesAlActor(serguei);
     }
 
-    @Cuando("el usuario ejecuta el servicio soap para la consulta de municipios en el sistema Tiempo Metrologico")
+    @Cuando("Serguei ejecuta el servicio soap para la consulta de municipios en el sistema Tiempo Metrologico")
     public void elUsuarioEjecutaElServicioSoapParaLaConsultaDeMunicipiosEnElSistemaTiempoMetrologico() {
-        asenegSteps.ejecutaServicioSoap(aseneg);
-        
+        asenegSteps.ejecutaServicioSoap(aseneg, serguei);
     }
 
-    @Entonces("el usuario puede ver que el servicio soap se ejecuta de manera correcta")
+    @Entonces("Serguei puede ver que el servicio soap se ejecuta de manera correcta")
     public void elUsuarioPuedeVerQueElServicioSoapSeEjecutaDeManeraCorrecta() {
-        Logger.getLogger("Fin prueba ***********************");
+        asenegSteps.verificarResponse(serguei);
+        asenegSteps.verificarResponseMunicipio(serguei, aseneg);
     }
 }
